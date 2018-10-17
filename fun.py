@@ -39,11 +39,10 @@ def sort(array, lower, upper):
         i=lower
         for x in range(lower+1,upper+1):
             if (array[x] < opp):
-                array[i+1], array[x] = array[x], array[i+1]
+                swap(array,i+1,x)
                 i=i+1
         swap(array,lower,i)
         if (i-1>lower):
             sort(array,lower,i-1)
         if (i+1<upper):
             sort(array,i+1,upper)
-
